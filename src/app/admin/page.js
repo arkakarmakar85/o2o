@@ -1,6 +1,4 @@
-import Script from 'next/script';
 import AdminMeta from './../components/AdminMenu';
-import LogoutModal from './../components/LogoutModal';
 import AdminNav from '../components/AdminNav';
 import AdminFooter from '../components/AdminFooter';
 
@@ -553,30 +551,6 @@ export default function admin() {
           {/* /.container-fluid*/}
         </div>
         <AdminFooter />
-        <LogoutModal />
-        
-      
-
-      
-    <Script src="admin_section/vendor/jquery/jquery.min.js" />
-    <Script src="admin_section/vendor/bootstrap/js/bootstrap.bundle.min.js" />
-    
-    <Script src="admin_section/vendor/jquery-easing/jquery.easing.min.js" />
-    <Script src="admin_section/vendor/chart.js/Chart.min.js" />
-    <Script src="admin_section/vendor/datatables/jquery.dataTables.js" />
-    <Script src="admin_section/vendor/datatables/dataTables.bootstrap4.js" />
-	<Script src="admin_section/vendor/jquery.selectbox-0.2.js" />
-	<Script src="admin_section/vendor/retina-replace.min.js" />
-	<Script src="admin_section/vendor/jquery.magnific-popup.min.js" />
-    
-    <Script src="admin_section/js/admin.js" />
-	
-	<Script src="admin_section/vendor/dropzone.min.js" />
-	<Script src="admin_section/vendor/bootstrap-datepicker.js" />
-	
-	
-	<Script src="admin_section/js/editor/summernote-bs4.min.js" />
-	
     </>
   );
 }
