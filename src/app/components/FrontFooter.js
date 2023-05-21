@@ -103,6 +103,8 @@ export default function FrontFooter() {
                     </div>
                 </div>
             </footer>
+
+            
             <Script src="https://maps.googleapis.com/maps/api/js" />
             <Script src="https://code.jquery.com/jquery-3.3.1.min.js" />
             <Script src="js/common_scripts.js" />

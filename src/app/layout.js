@@ -1,3 +1,4 @@
+
 import './globals.css'
 // import { Inter } from 'next/font/google'
 
@@ -11,7 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      
       <body>
+        <link rel="stylesheet" href="./css/bootstrap.min.css"  />
+        <link rel="stylesheet" href="./css/style.css"  />
+        <link rel="stylesheet" href="./css/vendors.css"  />
+        <link rel="stylesheet" href="./css/custom.css"  />  
         {children}
       </body>
     </html>
