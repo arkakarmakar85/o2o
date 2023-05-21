@@ -10,7 +10,6 @@ export default function Home() {
         <Meta />
         <div id="page">
           <HomeHeader />
-          {/* /header */}
           <main className="pattern">
             <section className="hero_single version_2">
               <div className="wrapper">
@@ -101,7 +100,7 @@ export default function Home() {
                 <div className="col-lg-3 col-sm-6">
                   <a href="detail-shop.html" className="grid_item small">
                     <figure>
-                      <img src="img/shop_1.jpg" alt />
+                      <img src="img/shop_1.jpg" alt="" />
                       <div className="info">
                         <h3>Victoria Secretes</h3>
                       </div>
@@ -111,7 +110,7 @@ export default function Home() {
                 <div className="col-lg-3 col-sm-6">
                   <a href="detail-shop.html" className="grid_item small">
                     <figure>
-                      <img src="img/shop_2.jpg" alt />
+                      <img src="img/shop_2.jpg" alt="" />
                       <div className="info">
                         <h3>Louis Vuitton</h3>
                       </div>
@@ -121,7 +120,7 @@ export default function Home() {
                 <div className="col-lg-3 col-sm-6">
                   <a href="detail-shop.html" className="grid_item small">
                     <figure>
-                      <img src="img/shop_3.jpg" alt />
+                      <img src="img/shop_3.jpg" alt="" />
                       <div className="info">
                         <h3>Burberry</h3>
                       </div>
@@ -131,7 +130,7 @@ export default function Home() {
                 <div className="col-lg-3 col-sm-6">
                   <a href="detail-shop.html" className="grid_item small">
                     <figure>
-                      <img src="img/shop_4.jpg" alt />
+                      <img src="img/shop_4.jpg" alt="" />
                       <div className="info">
                         <h3>Pinko</h3>
                       </div>
@@ -150,7 +149,7 @@ export default function Home() {
                 <div className="col-lg-3 col-sm-6">
                   <a href="detail-hotel.html" className="grid_item small">
                     <figure>
-                      <img src="img/hotel_1.jpg" alt />
+                      <img src="img/hotel_1.jpg" alt="" />
                       <div className="info">
                         <div className="cat_star"><i className="icon_star" /><i className="icon_star" /><i className="icon_star" /><i className="icon_star" /></div>
                         <h3>Hotel Mariott</h3>
@@ -161,7 +160,7 @@ export default function Home() {
                 <div className="col-lg-3 col-sm-6">
                   <a href="detail-hotel.html" className="grid_item small">
                     <figure>
-                      <img src="img/hotel_2.jpg" alt />
+                      <img src="img/hotel_2.jpg" alt="" />
                       <div className="info">
                         <div className="cat_star"><i className="icon_star" /><i className="icon_star" /><i className="icon_star" /><i className="icon_star" /></div>
                         <h3>Hotel Concorde</h3>
@@ -172,7 +171,7 @@ export default function Home() {
                 <div className="col-lg-3 col-sm-6">
                   <a href="detail-hotel.html" className="grid_item small">
                     <figure>
-                      <img src="img/hotel_3.jpg" alt />
+                      <img src="img/hotel_3.jpg" alt="" />
                       <div className="info">
                         <div className="cat_star"><i className="icon_star" /><i className="icon_star" /><i className="icon_star" /><i className="icon_star" /></div>
                         <h3>Hotel La Defanse</h3>
@@ -183,7 +182,7 @@ export default function Home() {
                 <div className="col-lg-3 col-sm-6">
                   <a href="detail-hotel.html" className="grid_item small">
                     <figure>
-                      <img src="img/hotel_4.jpg" alt />
+                      <img src="img/hotel_4.jpg" alt="" />
                       <div className="info">
                         <div className="cat_star"><i className="icon_star" /><i className="icon_star" /><i className="icon_star" /><i className="icon_star" /></div>
                         <h3>Hotel Carlton</h3>
@@ -203,7 +202,7 @@ export default function Home() {
                 <div className="col-lg-3 col-sm-6">
                   <a href="detail-restaurant.html" className="grid_item small">
                     <figure>
-                      <img src="img/restaurant_1.jpg" alt />
+                      <img src="img/restaurant_1.jpg" alt="" />
                       <div className="info">
                         <h3>Da Alfredo</h3>
                       </div>
@@ -213,7 +212,7 @@ export default function Home() {
                 <div className="col-lg-3 col-sm-6">
                   <a href="detail-restaurant.html" className="grid_item small">
                     <figure>
-                      <img src="img/restaurant_2.jpg" alt />
+                      <img src="img/restaurant_2.jpg" alt="" />
                       <div className="info">
                         <h3>Bistroter</h3>
                       </div>
@@ -223,7 +222,7 @@ export default function Home() {
                 <div className="col-lg-3 col-sm-6">
                   <a href="detail-restaurant.html" className="grid_item small">
                     <figure>
-                      <img src="img/restaurant_3.jpg" alt />
+                      <img src="img/restaurant_3.jpg" alt="" />
                       <div className="info">
                         <h3>Da Luigi</h3>
                       </div>
@@ -233,7 +232,7 @@ export default function Home() {
                 <div className="col-lg-3 col-sm-6">
                   <a href="detail-restaurant.html" className="grid_item small">
                     <figure>
-                      <img src="img/restaurant_4.jpg" alt />
+                      <img src="img/restaurant_4.jpg" alt="" />
                       <div className="info">
                         <h3>Marco King</h3>
                       </div>
@@ -295,8 +294,8 @@ export default function Home() {
                 <div className="col-md-6">
                   <img src="img/mobile.svg" alt className="img-fluid add_bottom_45" />
                   <div className="app_icons">
-                    <a href="#0" className="pr-lg-2"><img src="img/app_android.svg" alt /></a>
-                    <a href="#0" className="pl-lg-2"><img src="img/app_apple.svg" alt /></a>
+                    <a href="#0" className="pr-lg-2"><img src="img/app_android.svg" alt="" /></a>
+                    <a href="#0" className="pl-lg-2"><img src="img/app_apple.svg" alt="" /></a>
                   </div>
                   <div className="add_bottom_15"><small>*An eum dolores tractatos, aeterno menandri deseruisse ut eum.</small></div>
                 </div>
@@ -304,7 +303,6 @@ export default function Home() {
             </div>
             {/* /container */}
           </main>
-          
           <FrontFooter />
         </div>
         <SignInDialog />

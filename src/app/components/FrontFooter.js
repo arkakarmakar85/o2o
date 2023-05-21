@@ -109,7 +109,7 @@ export default function FrontFooter() {
             <Script src="js/functions.js" />
             <Script src="assets/validate.js" />
             
-            <Script src="js/animated_canvas_min.js" />
+            {/* <Script src="js/animated_canvas_min.js" /> */}
 
             
             <Script src="js/markerclusterer.js" />

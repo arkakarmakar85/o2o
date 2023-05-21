@@ -28,10 +28,6 @@ const Meta = () => {
                 <link href="css/vendors.css" rel="stylesheet" />
                 {/* YOUR CUSTOM CSS */}
                 <link href="css/custom.css" rel="stylesheet" />
-                
-
-
-                
             </div>
         </>
     );

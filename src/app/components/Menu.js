@@ -9,6 +9,7 @@ const Menu = () => {
                     <li><span><Link href="/listing">Listing</Link></span></li>
                     <li><span><Link href="/details">Details</Link></span></li>
                     <li><span><Link href="/about">About Us</Link></span></li>
+                    <li><span><Link href="/sample">Sample</Link></span></li>
 
                         {/* <li><span><a href="#0">Pages</a></span>
                         <ul>
