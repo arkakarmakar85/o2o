@@ -90,7 +90,7 @@ export default function FrontFooter() {
                                         </select>
                                     </div>
                                 </li>
-                                <li><img src="img/cards_all.svg" alt /></li>
+                                <li><img src="img/cards_all.svg" alt="" /></li>
                             </ul>
                         </div>
                         <div className="col-lg-6">

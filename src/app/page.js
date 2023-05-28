@@ -1,9 +1,26 @@
-import HomeHeader from './components/HomeHeader'
-import FrontFooter from './components/FrontFooter'
-import SignInDialog from './components/SignInDialog'
-import Meta from './components/Meta'
+"use client"
+import HomeHeader from './components/HomeHeader';
+import FrontFooter from './components/FrontFooter';
+import SignInDialog from './components/SignInDialog';
+import Meta from './components/Meta';
+import OpenApi from './components/openApi'
+import { useEffect } from 'react';
 
 export default function Home() {
+
+  const getflagedServices = async () => {
+    //console.log("env", process.env.NEXT_PUBLIC_BASE_URL);
+    try {
+      await OpenApi.get("/flaged-services/is_popular");
+    } catch (error) {
+      console.log({error});
+    }
+  }
+
+  useEffect(()=> {
+    getflagedServices();
+  }, []);
+
   return (
     <>
       <div>
@@ -18,19 +35,19 @@ export default function Home() {
                   <p>Discover top rated hotels, shops and restaurants around the world</p>
                   <form method="post" action="grid-listings-filterscol.html">
                     <div className="row no-gutters custom-search-input-2">
-                      <div className="col-lg-4">
+                      <div className="col-lg-6">
                         <div className="form-group">
                           <input className="form-control" type="text" placeholder="What are you looking for..." />
                           <i className="icon_search" />
                         </div>
                       </div>
-                      <div className="col-lg-3">
+                      <div className="col-lg-4">
                         <div className="form-group">
                           <input className="form-control" type="text" placeholder="Where" />
                           <i className="icon_pin_alt" />
                         </div>
                       </div>
-                      <div className="col-lg-3">
+                      {/* <div className="col-lg-3">
                         <select className="wide">
                           <option>All Categories</option>
                           <option>Shops</option>
@@ -40,7 +57,7 @@ export default function Home() {
                           <option>Events</option>
                           <option>Fitness</option>
                         </select>
-                      </div>
+                      </div> */}
                       <div className="col-lg-2">
                         <input type="submit" defaultValue="Search" />
                       </div>

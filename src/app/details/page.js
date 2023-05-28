@@ -148,7 +148,7 @@ const details = () => {
                     <ul className="menu_list">
                       <li>
                         <div className="thumb">
-                          <img src="img/shop_item_1.jpg" alt />
+                          <img src="img/shop_item_1.jpg" alt="" />
                         </div>
                         <h6>
                           Clothing Cloth T-shirt <span>$12</span>
@@ -157,7 +157,7 @@ const details = () => {
                       </li>
                       <li>
                         <div className="thumb">
-                          <img src="img/shop_item_2.jpg" alt />
+                          <img src="img/shop_item_2.jpg" alt="" />
                         </div>
                         <h6>
                           Clothing Cloth T-shirt <span>$12</span>
@@ -166,7 +166,7 @@ const details = () => {
                       </li>
                       <li>
                         <div className="thumb">
-                          <img src="img/shop_item_3.jpg" alt />
+                          <img src="img/shop_item_3.jpg" alt="" />
                         </div>
                         <h6>
                           Clothing Cloth T-shirt <span>$12</span>
@@ -175,7 +175,7 @@ const details = () => {
                       </li>
                       <li>
                         <div className="thumb">
-                          <img src="img/shop_item_4.jpg" alt />
+                          <img src="img/shop_item_4.jpg" alt="" />
                         </div>
                         <h6>
                           Clothing Cloth T-shirt <span>$12</span>
@@ -188,7 +188,7 @@ const details = () => {
                     <ul className="menu_list">
                       <li>
                         <div className="thumb">
-                          <img src="img/shop_item_5.jpg" alt />
+                          <img src="img/shop_item_5.jpg" alt="" />
                         </div>
                         <h6>
                           Clothing Cloth T-shirt <span>$12</span>
@@ -197,7 +197,7 @@ const details = () => {
                       </li>
                       <li>
                         <div className="thumb">
-                          <img src="img/shop_item_6.jpg" alt />
+                          <img src="img/shop_item_6.jpg" alt="" />
                         </div>
                         <h6>
                           Clothing Cloth T-shirt <span>$12</span>
@@ -206,7 +206,7 @@ const details = () => {
                       </li>
                       <li>
                         <div className="thumb">
-                          <img src="img/shop_item_7.jpg" alt />
+                          <img src="img/shop_item_7.jpg" alt="" />
                         </div>
                         <h6>
                           Clothing Cloth T-shirt <span>$12</span>
@@ -215,7 +215,7 @@ const details = () => {
                       </li>
                       <li>
                         <div className="thumb">
-                          <img src="img/shop_item_8.jpg" alt />
+                          <img src="img/shop_item_8.jpg" alt="" />
                         </div>
                         <h6>
                           Clothing Cloth T-shirt <span>$12</span>
@@ -351,7 +351,7 @@ const details = () => {
                 <div className="reviews-container">
                   <div className="review-box clearfix">
                     <figure className="rev-thumb">
-                      <img src="img/avatar1.jpg" alt />
+                      <img src="img/avatar1.jpg" alt="" />
                     </figure>
                     <div className="rev-content">
                       <div className="rating">
@@ -374,7 +374,7 @@ const details = () => {
                   {/* /review-box */}
                   <div className="review-box clearfix">
                     <figure className="rev-thumb">
-                      <img src="img/avatar2.jpg" alt />
+                      <img src="img/avatar2.jpg" alt="" />
                     </figure>
                     <div className="rev-content">
                       <div className="rating">
@@ -397,7 +397,7 @@ const details = () => {
                   {/* /review-box */}
                   <div className="review-box clearfix">
                     <figure className="rev-thumb">
-                      <img src="img/avatar3.jpg" alt />
+                      <img src="img/avatar3.jpg" alt="" />
                     </figure>
                     <div className="rev-content">
                       <div className="rating">
