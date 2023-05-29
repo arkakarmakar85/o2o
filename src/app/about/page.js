@@ -96,7 +96,7 @@ const about = () => {
               <div className="col-lg-6 wow" data-wow-offset={150}>
                 <figure className="block-reveal">
                   <div className="block-horizzontal" />
-                  <img src="img/about_1.jpg" className="img-fluid" alt />
+                  <img src="img/about_1.jpg" className="img-fluid" alt="" />
                 </figure>
               </div>
               <div className="col-lg-5">
@@ -142,7 +142,7 @@ const about = () => {
                     Julia Holmes<em>CEO</em>
                   </h4>
                 </div>
-                <img src="img/1_carousel.jpg" alt />
+                <img src="img/1_carousel.jpg" alt="" />
               </a>
             </div>
             <div className="item">
@@ -152,7 +152,7 @@ const about = () => {
                     Lucas Smith<em>Marketing</em>
                   </h4>
                 </div>
-                <img src="img/2_carousel.jpg" alt />
+                <img src="img/2_carousel.jpg" alt="" />
               </a>
             </div>
             <div className="item">
@@ -162,7 +162,7 @@ const about = () => {
                     Paul Stephens<em>Business strategist</em>
                   </h4>
                 </div>
-                <img src="img/3_carousel.jpg" alt />
+                <img src="img/3_carousel.jpg" alt="" />
               </a>
             </div>
             <div className="item">
@@ -172,7 +172,7 @@ const about = () => {
                     Pablo Himenez<em>Customer Service</em>
                   </h4>
                 </div>
-                <img src="img/4_carousel.jpg" alt />
+                <img src="img/4_carousel.jpg" alt="" />
               </a>
             </div>
             <div className="item">
@@ -182,7 +182,7 @@ const about = () => {
                     Andrew Stuttgart<em>Admissions</em>
                   </h4>
                 </div>
-                <img src="img/5_carousel.jpg" alt />
+                <img src="img/5_carousel.jpg" alt="" />
               </a>
             </div>
           </div>
