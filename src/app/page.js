@@ -3,7 +3,7 @@ import HomeHeader from './components/HomeHeader';
 import FrontFooter from './components/FrontFooter';
 import SignInDialog from './components/SignInDialog';
 import Meta from './components/Meta';
-import OpenApi from './components/openApi'
+import OpenApi from './components/OpenApi'
 import { useEffect } from 'react';
 
 export default function Home() {
