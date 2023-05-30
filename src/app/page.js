@@ -12,8 +12,11 @@ export default function Home() {
   const [places, setPlaces] = useState();
   const [popular, setpopular] = useState();
   const [called, setCalled] = useState();
+  const [selectedCategory, setSelectedCategory] = useState();
+  const [selectedPlace, setSelectedPlace] = useState();
 
   const getCategories = async (val) => {
+    setSelectedCategory(val); //setting the text value 
     try {
       let categories = await OpenApi.get("/get-category?category=" + val);
       setCategories(categories.data.categories);
@@ -24,6 +27,7 @@ export default function Home() {
   };
 
   const getPlaces = async (val) => {
+    setSelectedPlace(val)
     try {
       let places = await OpenApi.get("/get-places?place=" + val);
       setPlaces(places.data.places);
@@ -71,12 +75,13 @@ export default function Home() {
                     <div className="row no-gutters custom-search-input-2">
                       <div className="col-lg-6">
                         <div className="form-group">
-                          {/* code add hoba */}
+                          
                           <input
                             className="form-control dropbtn"
                             type="text"
                             placeholder="What are you looking for..."
                             onChange={(e) => getCategories(e.target.value)}
+                            value={selectedCategory?.val}
                           />
                           <i className="icon_search" />
 
@@ -88,9 +93,13 @@ export default function Home() {
                                     href="javascript:;"
                                     onClick={() => {
                                       setCategories([]);
+                                      setSelectedCategory({
+                                          id: category.id,
+                                          val: category.p_name
+                                      });
                                     }}
                                   >
-                                    {category.p_name}
+                                    {category?.p_name}
                                   </a>
                                 );
                               })}
@@ -104,19 +113,25 @@ export default function Home() {
                             type="text"
                             placeholder="Where"
                             onChange={(e) => getPlaces(e.target.value)}
+                            value={selectedPlace?.val}
                           />
                           <i className="icon_pin_alt" />
                           <div class="dropdown-content">
                             {places &&
-                              places.map((place) => {
+                              places.map((place, index) => {
                                 return (
                                   <a
+                                    key={index}
                                     href="javascript:;"
                                     onClick={() => {
                                       setPlaces([]);
+                                      setSelectedPlace({
+                                        id: place.id,
+                                        val: place.name
+                                      });
                                     }}
                                   >
-                                    {place.name}
+                                    {place?.name}
                                   </a>
                                 );
                               })}
@@ -308,7 +323,7 @@ export default function Home() {
                 <div className="col-md-6">
                   <img
                     src="img/mobile.svg"
-                    alt
+                    alt=""
                     className="img-fluid add_bottom_45"
                   />
                   <div className="app_icons">

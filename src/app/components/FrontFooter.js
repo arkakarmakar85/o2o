@@ -1,5 +1,3 @@
-import Script from 'next/script';
-
 export default function FrontFooter() {
     return (
         <>
@@ -97,26 +95,12 @@ export default function FrontFooter() {
                             <ul id="additional_links">
                                 <li><a href="#0">Terms and conditions</a></li>
                                 <li><a href="#0">Privacy</a></li>
-                                <li><span>© 20243 Sparker</span></li>
+                                <li><span>© 2023 {process.env.NEXT_PUBLIC_BASE_APP_NAME}</span></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </footer>
-
-            
-            <Script src="https://maps.googleapis.com/maps/api/js" />
-            <Script src="https://code.jquery.com/jquery-3.3.1.min.js" />
-            <Script src="js/common_scripts.js" />
-            <Script src="js/functions.js" />
-            <Script src="assets/validate.js" />
-            
-            {/* <Script src="js/animated_canvas_min.js" /> */}
-
-            
-            <Script src="js/markerclusterer.js" />
-            <Script src="js/map.js" />
-            <Script src="js/infobox.js" />
         </>
     );
 }

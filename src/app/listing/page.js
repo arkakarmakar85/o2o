@@ -269,7 +269,7 @@ const listing = () => {
                           <img
                             src="img/location_1.jpg"
                             className="img-fluid"
-                            alt
+                            alt=""
                           />
                           <div className="read_more">
                             <span>Read more</span>
@@ -317,7 +317,7 @@ const listing = () => {
                           <img
                             src="img/location_2.jpg"
                             className="img-fluid"
-                            alt
+                            alt=""
                           />
                           <div className="read_more">
                             <span>Read more</span>
@@ -365,7 +365,7 @@ const listing = () => {
                           <img
                             src="img/location_3.jpg"
                             className="img-fluid"
-                            alt
+                            alt=""
                           />
                           <div className="read_more">
                             <span>Read more</span>
@@ -413,7 +413,7 @@ const listing = () => {
                           <img
                             src="img/location_4.jpg"
                             className="img-fluid"
-                            alt
+                            alt=""
                           />
                           <div className="read_more">
                             <span>Read more</span>
@@ -461,7 +461,7 @@ const listing = () => {
                           <img
                             src="img/location_5.jpg"
                             className="img-fluid"
-                            alt
+                            alt=""
                           />
                           <div className="read_more">
                             <span>Read more</span>
@@ -509,7 +509,7 @@ const listing = () => {
                           <img
                             src="img/location_6.jpg"
                             className="img-fluid"
-                            alt
+                            alt=""
                           />
                           <div className="read_more">
                             <span>Read more</span>
