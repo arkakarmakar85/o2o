@@ -10,7 +10,7 @@ const FromOtherPageHeader = () => {
                         <div className="col-lg-3 col-12">
                             <div id="logo">
                                 <Link href="/">
-                                    <img src="img/logo_sticky.svg" width={165} height={35} alt className="logo_sticky" />
+                                    <img src="/img/logo_sticky.svg" width={165} height={35} alt className="logo_sticky" />
                                 </Link>
                             </div>
                         </div>

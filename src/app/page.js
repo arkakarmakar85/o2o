@@ -6,6 +6,7 @@ import Meta from "./components/Meta";
 import OpenApi from "./components/OpenApi";
 import { useEffect, useState } from "react";
 import Common from './components/Common';
+import Link from "next/link";
 
 export default function Home() {
   const [categories, setCategories] = useState();
@@ -191,21 +192,21 @@ export default function Home() {
                 <span />
                 <h2>Famous Services</h2>
                 {/* <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p> */}
-                <a href="grid-listings-filterscol.html">See all</a>
+                <a href="javascript:">See all</a>
               </div>
               <div className="row add_bottom_30">
                 {popular &&
                   popular.map((pop) => {
                     return (
                       <div className="col-lg-3 col-sm-6">
-                        <a href="detail-shop.html" className="grid_item small">
+                        <Link href={"/details/"+Common.slugify(pop.name)+"/"+pop.id} className="grid_item small">
                           <figure>
                             <img src={process.env.NEXT_PUBLIC_BASE_IMG_URL+pop.f_img} alt="" />
                             <div className="info">
                             <h3>{Common.ucWord(pop.name)}...</h3>
                             </div>
                           </figure>
-                        </a>
+                        </Link>
                       </div>
                     );
                   })}
@@ -215,14 +216,14 @@ export default function Home() {
                 <span />
                 <h2>Most Called Services</h2>
                 {/* <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p> */}
-                <a href="grid-listings-filterscol.html">See all</a>
+                <a href="javascript:">See all</a>
               </div>
               <div className="row add_bottom_30">
                 {called &&
                   called.map((pop) => {
                     return (
                       <div className="col-lg-3 col-sm-6">
-                        <a href="detail-shop.html" className="grid_item small">
+                      <Link href={"/details/"+Common.slugify(pop.name)+"/"+pop.id} className="grid_item small">
                           <figure>
                             <img src={process.env.NEXT_PUBLIC_BASE_IMG_URL+pop.f_img} alt="" />
                             <div className="info">
@@ -238,7 +239,7 @@ export default function Home() {
                               <h3>{Common.ucWord(pop.name)}...</h3>
                             </div>
                           </figure>
-                        </a>
+                        </Link>
                       </div>
                     );
                   })}
@@ -316,7 +317,7 @@ export default function Home() {
                 <span>
                   <em />
                 </span>
-                <h2>Sparker App Available</h2>
+                <h2>{process.env.NEXT_PUBLIC_BASE_APP_NAME} App Available</h2>
                 <p>Cum doctus civibus efficiantur in imperdiet deterruisset.</p>
               </div>
               <div className="row justify-content-center text-center">

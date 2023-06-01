@@ -6,9 +6,9 @@ export default function HomeHeader() {
         <>
         <header className="header menu_fixed">
             <div id="logo">
-                <Link href="/" title="Sparker - Directory and listings template">
-                    <img src="img/logo.svg" width={165} height={35} alt className="logo_normal" />
-                    <img src="img/logo_sticky.svg" width={165} height={35} alt className="logo_sticky" />
+                <Link href="/" title={process.env.NEXT_PUBLIC_BASE_APP_NAME+' - Directory and listings template'}>
+                    <img src="/img/logo.svg" width={165} height={35} alt className="logo_normal" />
+                    <img src="/img/logo_sticky.svg" width={165} height={35} alt className="logo_sticky" />
                 </Link>
             </div>
             <ul id="top_menu">

@@ -14,7 +14,7 @@ const FrontLayout = ({children}) => {
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <meta name="description" content="SPARKER - Premium directory and listings template by Ansonika." />
             <meta name="author" content="Ansonika" />
-            <title>O2O | Premium directory and listings template by Ansonika.</title>
+            <title>{process.env.NEXT_PUBLIC_BASE_APP_NAME} | Premium directory and listings template by {process.env.NEXT_PUBLIC_BASE_APP_NAME}.</title>
             <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />
                   
       
@@ -29,7 +29,7 @@ const FrontLayout = ({children}) => {
             
             <div className="sub_header_in sticky_header">
                 <div className="container">
-                    <h1>About Sparker Directory</h1>
+                    <h1>About {process.env.NEXT_PUBLIC_BASE_APP_NAME} Directory</h1>
                 </div>
             </div>
 
