@@ -90,7 +90,7 @@ export default function Home() {
                             {categories &&
                               categories.map((category) => {
                                 return (
-                                  <a
+                                  <a key={category.id}
                                     href="javascript:;"
                                     onClick={() => {
                                       setCategories([]);

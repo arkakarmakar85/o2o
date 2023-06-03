@@ -2,14 +2,19 @@
 import { useEffect, useState } from "react";
 import FrontLayout from "../../components/FrontLayout";
 import OpenApi from "@/app/components/OpenApi";
+import Common from './../../components/Common';
 
-const details = ({ params }) => {
+const Details = ({ params }) => {
   const [details, setDetails] = useState();
+  const [services, setServices] = useState();
+
+
   const getDetails = async (id) => {
     try {
       let details = await OpenApi.get("/details/" + id);
       console.log(details.data.details);
       setDetails(details.data.details);
+      setServices(details.data.services);
     } catch (error) {
       setDetails([]);
       console.log({ error });
@@ -68,55 +73,31 @@ const details = ({ params }) => {
             <div className="col-lg-8">
               <section id="description">
                 <div className="detail_title_1">
-                  <h1>Victoria Secrets</h1>
+                  {details && <h1>{Common.ucWord(details.name)}</h1>}
                   <a
                     className="address"
                     href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x47e66e1de36f4147:0xb6615b4092e0351f!2sAssistance+Publique+-+H%C3%B4pitaux+de+Paris+(AP-HP)+-+Si%C3%A8ge!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361"
                   >
-                    438 Rush Green Road, Romford
+                    {details?Common.ucWord(details.address):''}
                   </a>
                 </div>
-                <p>
-                  Per consequat adolescens ex, cu nibh commune{" "}
-                  <strong>temporibus vim</strong>, ad sumo viris eloquentiam
-                  sed. Mea appareat omittantur eloquentiam ad, nam ei quas
-                  oportere democritum. Prima causae admodum id est, ei timeam
-                  inimicus sed. Sit an meis aliquam, cetero inermis vel ut. An
-                  sit illum euismod facilisis, tamquam vulputate pertinacia eum
-                  at.
-                </p>
-                <p>
-                  Cum et probo menandri. Officiis consulatu pro et, ne sea sale
-                  invidunt, sed ut sint <strong>blandit</strong> efficiendi.
-                  Atomorum explicari eu qui, est enim quaerendum te. Quo harum
-                  viris id. Per ne quando dolore evertitur, pro ad cibo commune.
-                </p>
-                <h5 className="add_bottom_15">Brands</h5>
+                {details && <p dangerouslySetInnerHTML={{ __html: details.short_description }}></p>}
+
+                <h5 className="add_bottom_15">Services</h5>
                 <div className="row add_bottom_30">
-                  <div className="col-md-4">
+                  <div className="col-md-12">
                     <ul className="bullets">
-                      <li>Valentino</li>
-                      <li>Gucci</li>
-                      <li>Louis Vuitton</li>
-                      <li>Burberry</li>
+                    {services &&
+                      services.map((service) => {
+                        console.log({service})
+                        return (
+                          <li key={service.id}>{Common.ucWord(service?.services)}</li>
+                        );
+                      })}
+                      
                     </ul>
                   </div>
-                  <div className="col-md-4">
-                    <ul className="bullets">
-                      <li>Moschino</li>
-                      <li>Diesel</li>
-                      <li>Prada</li>
-                      <li>Ralph Lauren</li>
-                    </ul>
-                  </div>
-                  <div className="col-md-4">
-                    <ul className="bullets">
-                      <li>Moschino</li>
-                      <li>Diesel</li>
-                      <li>Prada</li>
-                      <li>Ralph Lauren</li>
-                    </ul>
-                  </div>
+                
                 </div>
                 {/* /row */}
                 <div className="opening">
@@ -158,7 +139,7 @@ const details = ({ params }) => {
                   </div>
                 </div>
                 {/* /opening */}
-                <hr />
+                {/* <hr />
                 <h5>Special offers</h5>
                 <div className="row">
                   <div className="col-lg-6 col-md-12">
@@ -241,14 +222,17 @@ const details = ({ params }) => {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
                 {/* /row */}
                 <hr />
                 <h3>Location</h3>
-                <div id="map" className="map map_single add_bottom_45" />
+                {/* <div id="map" className="map map_single add_bottom_45" /> */}
+                {details && <div className="map map_single add_bottom_45" dangerouslySetInnerHTML={{ __html: details.map_code }}></div>}
                 {/* End Map */}
               </section>
               {/* /section */}
+  
+  
               <section id="reviews">
                 <h2>Reviews</h2>
                 <div className="reviews-container add_bottom_30">
@@ -612,4 +596,4 @@ const details = ({ params }) => {
   );
 };
 
-export default details;
+export default Details;
