@@ -7,6 +7,9 @@ import OpenApi from "./components/OpenApi";
 import { useEffect, useState } from "react";
 import Common from './components/Common';
 import Link from "next/link";
+import { useRouter } from 'next/navigation';
+
+
 
 export default function Home() {
   const [categories, setCategories] = useState();
@@ -15,6 +18,9 @@ export default function Home() {
   const [called, setCalled] = useState();
   const [selectedCategory, setSelectedCategory] = useState();
   const [selectedPlace, setSelectedPlace] = useState();
+
+  const router = useRouter();
+
 
   const getCategories = async (val) => {
     setSelectedCategory(val); //setting the text value 
@@ -72,7 +78,7 @@ export default function Home() {
                     Discover top rated hotels, shops and restaurants around the
                     world
                   </p>
-                  <form method="post" action="grid-listings-filterscol.html">
+                  <form method="post" action="javascript:">
                     <div className="row no-gutters custom-search-input-2">
                       <div className="col-lg-6">
                         <div className="form-group">
@@ -140,7 +146,17 @@ export default function Home() {
                         </div>
                       </div>
                       <div className="col-lg-2">
-                        <input type="submit" value="Search" />
+                        <input type="submit" value="Search" onClick={()=> {
+                          let params = '';
+                          if(selectedCategory && selectedPlace) {
+                            params = "?category="+selectedCategory.val+"&place="+selectedPlace.val;
+                          } else if(selectedCategory && !selectedPlace) {
+                            params = "?category="+selectedCategory.val;
+                          } else if(!selectedCategory && selectedPlace) {
+                            params = "?place="+selectedPlace.val;
+                          }
+                          router.push('/search'+params)
+                        }} />
                       </div>
                     </div>
                     {/* /row */}
@@ -153,34 +169,34 @@ export default function Home() {
               <div className="container">
                 <ul className="clearfix">
                   <li>
-                    <a href="grid-listings-filterscol.html">
+                    <Link href="/search?category=Beauty">
                       <i className="icon-shop" />
-                      <h3>Shops</h3>
-                    </a>
+                      <h3>Beauty & Makeup</h3>
+                    </Link>
                   </li>
                   <li>
-                    <a href="grid-listings-filterscol.html">
+                    <Link href="/search?category=Hotels">
                       <i className="icon-lodging" />
                       <h3>Hotels</h3>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="grid-listings-filterscol.html">
+                    <Link href="/search?category=Restaurants">
                       <i className="icon-restaurant" />
                       <h3>Restaurants</h3>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="grid-listings-filterscol.html">
+                    <Link href="/search?category=Bars">
                       <i className="icon-bar" />
                       <h3>Bars</h3>
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a href="grid-listings-filterscol.html">
+                    <Link href="/search?category=">
                       <i className="icon-dot-3" />
                       <h3>More</h3>
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -198,7 +214,7 @@ export default function Home() {
                 {popular &&
                   popular.map((pop) => {
                     return (
-                      <div className="col-lg-3 col-sm-6">
+                      <div className="col-lg-3 col-sm-6" key={pop.id}>
                         <Link href={"/details/"+Common.slugify(pop.name)+"/"+pop.id} className="grid_item small">
                           <figure>
                             <img src={process.env.NEXT_PUBLIC_BASE_IMG_URL+pop.f_img} alt="" />
@@ -222,7 +238,7 @@ export default function Home() {
                 {called &&
                   called.map((pop) => {
                     return (
-                      <div className="col-lg-3 col-sm-6">
+                      <div className="col-lg-3 col-sm-6" key={pop.id}>
                       <Link href={"/details/"+Common.slugify(pop.name)+"/"+pop.id} className="grid_item small">
                           <figure>
                             <img src={process.env.NEXT_PUBLIC_BASE_IMG_URL+pop.f_img} alt="" />

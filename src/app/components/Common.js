@@ -1,9 +1,14 @@
 "use client"
 const  Common = {
     ucWord: (str) => {
-        return str.toLowerCase().replace(/\b[a-z]/g, function(letra) {
-            return letra.toUpperCase();
-        });
+        if(str) {
+            return str.toLowerCase().replace(/\b[a-z]/g, function(letra) {
+                return letra.toUpperCase();
+            });
+        } else {
+            return ''
+        }
+        
     },
 
     slugify: (str) => str

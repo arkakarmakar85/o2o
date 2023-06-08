@@ -27,7 +27,12 @@ const Details = ({ params }) => {
     <FrontLayout>
       <main>
         <div className="hero_in shop_detail">
-          <div className="wrapper">
+          <div className="wrapper" style={{backgroundImage: `url(${process.env.NEXT_PUBLIC_BASE_IMG_URL + details?.f_img})`,
+          
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center center',
+                backgroundSize: 'cover',
+            }}>
             <span className="magnific-gallery">
               <a
                 href="img/gallery/hotel_list_1.jpg"

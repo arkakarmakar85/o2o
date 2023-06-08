@@ -3960,19 +3960,20 @@ a.btn_search_mobile.map_view {
     height: 350px;
   }
 }
-.hero_in.shop_detail:before {
+/* .hero_in.shop_detail:before {
   background: url(../img/hero_in_shop_detail.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 .hero_in.shop_detail .wrapper {
   background-color: black;
   background-color: rgba(0, 0, 0, 0.2);
 }
 .hero_in.hotels_detail {
   height: 550px;
+  
 }
 @media (max-width: 767px) {
   .hero_in.hotels_detail {
