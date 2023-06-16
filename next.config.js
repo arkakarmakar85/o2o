@@ -3,6 +3,10 @@ const nextConfig = {
 
     output: 'export',
     //basePath: '/front',
+
+    images: {
+        unoptimized: true
+    },
     eslint: {
         ignoreDuringBuilds: true,   
     },

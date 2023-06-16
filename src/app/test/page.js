@@ -4,7 +4,7 @@
 
 import React from 'react'
 //import './App.css'
-import { ReactSearchAutocomplete } from 'react-search-autocomplete'
+// import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 
 function App() {
   // note: the id field is mandatory
@@ -79,7 +79,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div style={{ width: 400 }}>
-          <ReactSearchAutocomplete
+          {/* <ReactSearchAutocomplete
             items={items}
             onSearch={handleOnSearch}
             onHover={handleOnHover}
@@ -87,7 +87,7 @@ function App() {
             onFocus={handleOnFocus}
             autoFocus
             formatResult={formatResult}
-          />
+          /> */}
         </div>
       </header>
     </div>

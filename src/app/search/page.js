@@ -1,10 +1,30 @@
-import FrontFooter from "../components/FrontFooter";
+"use client"
+import { useEffect } from "react";
 import FrontLayout from "../components/FrontLayout";
-import FromOtherPageHeader from "../components/FrontOtherPageHeader";
-import Meta from "../components/Meta";
-import SignInDialog from "../components/SignInDialog";
+import OpenApi from "@/app/components/OpenApi";
+import { useSearchParams  } from 'next/navigation';
 
-const listing = () => {
+
+
+const listing = ({ params }) => {
+  const queryParams = useSearchParams();
+  const place = queryParams.get('place');
+  const category = queryParams.get('category');
+
+
+  const getDetails = async (id) => {
+    try {
+      
+    } catch (error) {
+      
+    }
+  }
+
+  useEffect(()=>{
+    getDetails();
+  }, []);
+
+
   return (
     <>
       <FrontLayout>
@@ -77,7 +97,7 @@ const listing = () => {
                     />
                     <i className="icon_pin_alt" />
                   </div>
-                  <select className="wide">
+                  {/* <select className="wide">
                     <option>All Categories</option>
                     <option>Shops</option>
                     <option>Hotels</option>
@@ -85,7 +105,7 @@ const listing = () => {
                     <option>Bars</option>
                     <option>Events</option>
                     <option>Fitness</option>
-                  </select>
+                  </select> */}
                   <input type="submit" defaultValue="Search" />
                 </div>
               </div>
@@ -95,7 +115,7 @@ const listing = () => {
           </div>
           {/* /results */}
           <div className="filters_listing version_2  sticky_horizontal">
-            <div className="container">
+            {/* <div className="container">
               <ul className="clearfix">
                 <li>
                   <div className="switch-field">
@@ -150,7 +170,7 @@ const listing = () => {
                   </a>
                 </li>
               </ul>
-            </div>
+            </div> */}
             {/* /container */}
           </div>
           {/* /filters */}

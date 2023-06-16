@@ -154,7 +154,7 @@ export default function Home() {
                             params = "?category="+selectedCategory.val;
                           } else if(!selectedCategory && selectedPlace) {
                             params = "?place="+selectedPlace.val;
-                          }
+                          } 
                           router.push('/search'+params)
                         }} />
                       </div>

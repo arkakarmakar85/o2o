@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import FrontLayout from "../../components/FrontLayout";
 import OpenApi from "@/app/components/OpenApi";
 import Common from './../../components/Common';
+// import { DiscussionEmbed } from 'disqus-react';
+
 
 const Details = ({ params }) => {
   const [details, setDetails] = useState();
@@ -354,77 +356,7 @@ const Details = ({ params }) => {
                   </div>
                   {/* /row */}
                 </div>
-                <div className="reviews-container">
-                  <div className="review-box clearfix">
-                    <figure className="rev-thumb">
-                      <img src="/img/avatar1.jpg" alt="" />
-                    </figure>
-                    <div className="rev-content">
-                      <div className="rating">
-                        <i className="icon_star voted" />
-                        <i className="icon_star voted" />
-                        <i className="icon_star voted" />
-                        <i className="icon_star voted" />
-                        <i className="icon_star" />
-                      </div>
-                      <div className="rev-info">Admin – April 03, 2016:</div>
-                      <div className="rev-text">
-                        <p>
-                          Sed eget turpis a pede tempor malesuada. Vivamus quis
-                          mi at leo pulvinar hendrerit. Cum sociis natoque
-                          penatibus et magnis dis
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  {/* /review-box */}
-                  <div className="review-box clearfix">
-                    <figure className="rev-thumb">
-                      <img src="/img/avatar2.jpg" alt="" />
-                    </figure>
-                    <div className="rev-content">
-                      <div className="rating">
-                        <i className="icon-star voted" />
-                        <i className="icon_star voted" />
-                        <i className="icon_star voted" />
-                        <i className="icon_star voted" />
-                        <i className="icon_star" />
-                      </div>
-                      <div className="rev-info">Ahsan – April 01, 2016:</div>
-                      <div className="rev-text">
-                        <p>
-                          Sed eget turpis a pede tempor malesuada. Vivamus quis
-                          mi at leo pulvinar hendrerit. Cum sociis natoque
-                          penatibus et magnis dis
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  {/* /review-box */}
-                  <div className="review-box clearfix">
-                    <figure className="rev-thumb">
-                      <img src="/img/avatar3.jpg" alt="" />
-                    </figure>
-                    <div className="rev-content">
-                      <div className="rating">
-                        <i className="icon-star voted" />
-                        <i className="icon_star voted" />
-                        <i className="icon_star voted" />
-                        <i className="icon_star voted" />
-                        <i className="icon_star" />
-                      </div>
-                      <div className="rev-info">Sara – March 31, 2016:</div>
-                      <div className="rev-text">
-                        <p>
-                          Sed eget turpis a pede tempor malesuada. Vivamus quis
-                          mi at leo pulvinar hendrerit. Cum sociis natoque
-                          penatibus et magnis dis
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  {/* /review-box */}
-                </div>
+                
                 {/* /review-container */}
               </section>
               {/* /section */}
