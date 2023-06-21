@@ -1,8 +1,13 @@
+"use client"
+import { useEffect } from 'react';
 import FrontLayout from '../../components/FrontLayout';
 
 const allServices = ({ params }) => {
 
     console.log(params.category[0]); // print 1st param of query string / url
+    useEffect(()=>{
+       
+    }, []);
 
     return (
         <FrontLayout>

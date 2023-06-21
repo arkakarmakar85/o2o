@@ -210,7 +210,7 @@ export default function Home() {
                   <div className="col-lg-3 col-sm-6" key={pop.id}>
                     <Link href={"/details/" + Common.slugify(pop.name) + "/" + pop.id} className="grid_item small">
                       <figure>
-                        <img src={process.env.NEXT_PUBLIC_BASE_IMG_URL + pop.f_img} alt="" />
+                        <img src={process.env.NEXT_PUBLIC_BASE_IMG_URL + pop.f_img} alt={pop.f_img} />
                         <div className="info">
                           <h3>{Common.ucWord(pop.name)}...</h3>
                         </div>
