@@ -13,7 +13,7 @@ const FrontLayout = ({children}) => {
             <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
             <meta name="description" content="SPARKER - Premium directory and listings template by Ansonika." />
-            <meta name="author" content="Ansonika" />
+            <meta name="author" content="O2O" />
             <title>{process.env.NEXT_PUBLIC_BASE_APP_NAME} | Premium directory and listings template by {process.env.NEXT_PUBLIC_BASE_APP_NAME}.</title>
             <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet" />
                   
@@ -34,7 +34,7 @@ const FrontLayout = ({children}) => {
             </div>
 
             <div id="page">
-                <FromOtherPageHeader />
+                <FromOtherPageHeader /> 
                 {children}
                 <FrontFooter />
             </div>

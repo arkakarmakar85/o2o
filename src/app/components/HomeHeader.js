@@ -3,7 +3,7 @@ import Menu from './Menu';
 
 export default function HomeHeader() {
     return (
-        <>
+        <div>
         <header className="header menu_fixed">
             <div id="logo">
                 <Link href="/" title={process.env.NEXT_PUBLIC_BASE_APP_NAME+' - Directory and listings template'}>
@@ -12,9 +12,8 @@ export default function HomeHeader() {
                 </Link>
             </div>
             <ul id="top_menu">
-                <li><a href="account.html" className="btn_add">Add Listing</a></li>
-                <li><a href="#sign-in-dialog" id="sign-in" className="login" title="Sign In">Sign In</a></li>
-                <li><a href="wishlist.html" className="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+                <li><Link href="auth" className="btn_add">Add Listing / Registration</Link></li>
+                {/* <li><Link href="#sign-in-dialog" id="sign-in" className="login" title="Sign In">Sign In</Link></li> */}
             </ul>
             {/* /top_menu */}
             <a href="#menu" className="btn_mobile">
@@ -26,6 +25,6 @@ export default function HomeHeader() {
             </a>
             <Menu />
         </header>
-        </>
+        </div>
     );
 } 

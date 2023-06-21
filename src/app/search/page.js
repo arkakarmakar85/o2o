@@ -12,16 +12,23 @@ const listing = ({ params }) => {
   const category = queryParams.get('category');
 
 
-  const getDetails = async (id) => {
+  const getSearch = async (id) => {
     try {
-      
+      const paramsObj = {
+        place: decodeURIComponent(place),
+        category: decodeURIComponent(category)
+      };
+      const searchParams = new URLSearchParams(paramsObj); //from core javascript
+      console.log(searchParams.toString())
+
+      let details = await OpenApi.get("/search?"+searchParams);
     } catch (error) {
       
     }
   }
 
   useEffect(()=>{
-    getDetails();
+    getSearch();
   }, []);
 
 

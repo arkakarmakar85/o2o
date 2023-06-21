@@ -3,7 +3,7 @@ import Menu from "./Menu";
 
 const FromOtherPageHeader = () => {
     return (
-        <>
+        <div>
             <header className="header_in is_sticky menu_fixed">
                 <div className="container">
                     <div className="row">
@@ -16,9 +16,8 @@ const FromOtherPageHeader = () => {
                         </div>
                         <div className="col-lg-9 col-12">
                             <ul id="top_menu">
-                                <li><a href="account.html" className="btn_add">Add Listing</a></li>
-                                <li><a href="#sign-in-dialog" id="sign-in" className="login" title="Sign In">Sign In</a></li>
-                                <li><a href="wishlist.html" className="wishlist_bt_top" title="Your wishlist">Your wishlist</a></li>
+                                <li><Link href="/auth" className="btn_add">Add Listing / Registration</Link></li>
+                                {/* <li><a href="#sign-in-dialog" id="sign-in" className="login" title="Sign In">Sign In</a></li> */}
                             </ul>
                             {/* /top_menu */}
                             <a href="#menu" className="btn_mobile">
@@ -36,7 +35,7 @@ const FromOtherPageHeader = () => {
                 {/* /container */}
             </header>
 
-        </>
+        </div>
     );
 }
 
