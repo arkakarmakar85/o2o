@@ -23,7 +23,7 @@ const listing = ({ params }) => {
         category: decodeURIComponent(category===null?'':category), 
       };
       const searchParams = new URLSearchParams(paramsObj); //from core javascript
-      console.log(searchParams.toString())
+      console.log("---------------- ",searchParams.toString())
 
       let details = await OpenApi.get("/search?"+searchParams.toString());
       if(details.data?.leads) {
