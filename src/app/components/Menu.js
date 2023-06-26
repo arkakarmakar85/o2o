@@ -6,18 +6,9 @@ const Menu = () => {
             <nav id="menu" className="main-menu">
                 <ul>
                     <li><span><Link href="/">Home</Link></span></li>
-                    <li><span><Link href="/about">About Us</Link></span></li>
-                    <li><span><Link href="/sample">Sample</Link></span></li>
-
-                        {/* <li><span><a href="#0">Pages</a></span>
+                    <li>
+                        <span><a href="#0">Categories</a></span>
                         <ul>
-                            <li><a href="admin_section/index.html">Admin section</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="account.html">Account</a></li>
-                            <li><a href="help.html">Help Section</a></li>
-                            <li><a href="faq.html">Faq Section</a></li>
-                            <li><a href="wishlist.html">Wishlist page</a></li>
-                            <li><a href="contacts.html">Contacts</a></li>
                             <li>
                                 <span><a href="#0">Icon Packs</a></span>
                                 <ul>
@@ -30,7 +21,12 @@ const Menu = () => {
                             <li><a href="about.html">About</a></li>
                             <li><a href="media-gallery.html">Media gallery</a></li>
                         </ul>
-                    </li> */}
+                    </li>
+
+
+                    <li><span><Link href="/about">About Us</Link></span></li>
+
+                    
                 </ul>
             </nav>
         </>
