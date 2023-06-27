@@ -9,12 +9,17 @@ const sample = ({ params }) => {
   const getDetails = async (id) => {
     try {
       let details = await OpenApi.get("/category-details?id=" + id);
-      console.log(details.data);
+      //console.log(details.data);
 
       setDetails(details.data);
     } catch (error) {
       setDetails([]);
+      console.log("---------------------");
+      console.log({ error });
+     
     }
+    
+
   };
 
   useEffect(() => {
@@ -47,7 +52,8 @@ const sample = ({ params }) => {
                     {details &&
                       details.leads.map((detail) => {
                         return (
-                          <div className="col-xl-4 col-lg-6 col-md-6">
+                          // <div className="col-xl-4 col-lg-6 col-md-6">
+                            <div className="col-xl-4 col-lg-6 col-md-6" key={detail.id}>
                             <div className="strip grid">
                               <div className="wrapper">
                                 <figure>
@@ -66,25 +72,20 @@ const sample = ({ params }) => {
                                   {/* <small>Restaurant</small> */}
                                 </figure>
                                 <h3>
-                                  <a href="detail.html">Da Alfredo</a>
+                                  <a href="detail.html">{detail.name}</a>
                                 </h3>
                                 <small>
                                   {/* {service!= "" ? service[leads].city_id : " "} */}
+                                  {detail.address !="" ? detail.address : " " }
                                 </small>
                                 <p>
-                                  {detail.slug}
+                                {detail.slug !="" ? detail.slug : " " }
                                 </p>
-                                <a
-                                  className="address"
-                                  href="https://www.google.com/maps/dir//Assistance+%E2%80%93+H%C3%B4pitaux+De+Paris,+3+Avenue+Victoria,+75004+Paris,+Francia/@48.8606548,2.3348734,14z/data=!4m15!1m6!3m5!1s0x47e66e1de36f4147:0xb6615b4092e0351f!2sAssistance+Publique+-+H%C3%B4pitaux+de+Paris+(AP-HP)+-+Si%C3%A8ge!8m2!3d48.8568376!4d2.3504305!4m7!1m0!1m5!1m1!1s0x47e67031f8c20147:0xa6a9af76b1e2d899!2m2!1d2.3504327!2d48.8568361"
-                                  target="_blank"
-                                >
-                                  Get directions
-                                </a>
+                                <a className="address" href={`https://www.google.com/maps/dir/?api=1&destination=${detail.lat !== "" ? detail.lng : " "},-118.368152`} target="_blank">Get directions</a>
                               </div>
                               <ul>
                                 <li>
-                                  <span className="loc_open">Now Open</span>
+                                  <span className="loc_open">{detail.is_online}</span>
                                 </li>
                                 <li>
                                   <div className="score">
@@ -99,6 +100,7 @@ const sample = ({ params }) => {
                           </div>
                         );
                       })}
+                       {details?.length===0 && <h1 className="text-center">Sorry no result found.</h1>}
                   </div>
                 </div>
 
