@@ -57,10 +57,34 @@ const allServices = ({ params }) => {
                                     {/* এখানে lat & long  টা স্ট্যাটিক দেয়া আছে । api থেকে ভ্যালু নিয়ে চেঞ্জ করে দিতে হবে। */}
                                     <a className="address" href={`https://www.google.com/maps/dir/?api=1&destination=${item.lat !== "" ? item.lng : " "},-118.368152`} target="_blank">Get directions</a>
                                 </div>
+
                                 <ul>
-                                    <li><span className="loc_open">{item.is_online}</span></li>
+                              {item && item.is_online=="online" && <li>
+                                <span className="loc_open">Now Open</span>
+                              </li>}
+                              {item && item.is_online=="offline" && <li>
+                                <span className="loc_closed">Now Closed</span>
+                              </li>}
+                              <li>
+                                <div className="score">
+                                  <span>
+                                    Superb<em>350 Reviews</em>
+                                  </span>
+                                  <strong>8.9</strong>
+                                </div>
+                              </li>
+                            </ul>
+
+
+
+
+
+
+
+                                {/* <ul>
+                                    <li><span className="loc_open">Now {item.is_online}</span></li>
                                     <li><div className="score"><span>Superb<em>350 Reviews</em></span><strong>8.9</strong></div></li>
-                                </ul>
+                                </ul> */}
                             </div>
                         </div>
                         ))}

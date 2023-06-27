@@ -84,9 +84,32 @@ const sample = ({ params }) => {
                                 </p>
                                 <a className="address" href={`https://www.google.com/maps/dir/?api=1&destination=${detail.lat !== "" ? detail.lng : " "},-118.368152`} target="_blank">Get directions</a>
                               </div>
+                             
+                             
                               <ul>
+                              {detail && detail.is_online=="online" && <li>
+                                <span className="loc_open">Now Open</span>
+                              </li>}
+                              {detail && detail.is_online=="offline" && <li>
+                                <span className="loc_closed">Now Closed</span>
+                              </li>}
+                              <li>
+                                <div className="score">
+                                  <span>
+                                    Superb<em>350 Reviews</em>
+                                  </span>
+                                  <strong>8.9</strong>
+                                </div>
+                              </li>
+                            </ul>
+                             
+                             
+                             
+                             
+                             
+                              {/* <ul>
                                 <li>
-                                  <span className="loc_open">{detail.is_online}</span>
+                                  <span className="loc_open">Now {detail.is_online}</span>
                                 </li>
                                 <li>
                                   <div className="score">
@@ -96,7 +119,7 @@ const sample = ({ params }) => {
                                     <strong>8.9</strong>
                                   </div>
                                 </li>
-                              </ul>
+                              </ul> */}
                             </div>
                           </div>
                         );
