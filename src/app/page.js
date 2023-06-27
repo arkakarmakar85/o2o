@@ -162,7 +162,8 @@ export default function Home() {
           <div className="container">
             <ul className="clearfix">
               <li>
-                <Link href="/search?category=Beauty">
+                {/* <Link href="/search?category=Beauty"> */}
+                <Link href={"/category/" + Common.slugify("Beauty & Makeup") + "/" + 1} >
                   <i className="icon-shop" />
                   <h3>Beauty & Makeup</h3>
                 </Link>
