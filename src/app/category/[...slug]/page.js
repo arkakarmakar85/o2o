@@ -7,13 +7,14 @@ const sample = ({ params }) => {
   const [details, setDetails] = useState();
 
   const getDetails = async (id) => {
+    
     try {
       let details = await OpenApi.get("/category-details?id=" + id);
       //console.log(details.data);
 
       setDetails(details.data);
     } catch (error) {
-      setDetails([]);
+      // setDetails([]);
       console.log("---------------------");
       console.log({ error });
      
@@ -100,7 +101,7 @@ const sample = ({ params }) => {
                           </div>
                         );
                       })}
-                       {details?.length===0 && <h1 className="text-center">Sorry no result found.</h1>}
+                       {!details  && <h1 className="text-center">Sorry no result found.</h1>}
                   </div>
                 </div>
 
