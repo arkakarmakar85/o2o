@@ -53,7 +53,6 @@ const sample = ({ params }) => {
                     {details &&
                       details.leads.map((detail) => {
                         return (
-                          // <div className="col-xl-4 col-lg-6 col-md-6">
                             <div className="col-xl-4 col-lg-6 col-md-6" key={detail.id}>
                             <div className="strip grid">
                               <div className="wrapper">
@@ -101,10 +100,12 @@ const sample = ({ params }) => {
                           </div>
                         );
                       })}
-                       {!details  && <h1 className="text-center">Sorry no result found.</h1>}
+                       
                   </div>
-                </div>
 
+                  {!details  && <p><h1 className="text-center">Sorry no result found.</h1></p> }
+                </div>
+                
                 {/* start */}
               </div>
 
